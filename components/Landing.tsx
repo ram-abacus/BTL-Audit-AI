@@ -6,6 +6,7 @@ import { Check, Shield, Camera, BarChart3, MapPin, Upload, Sparkles, IndianRupee
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import BasiqForm from "./ContactForm";
 
 export default function Landing() {
   const [email, setEmail] = useState("");
@@ -16,7 +17,11 @@ export default function Landing() {
       <header className="sticky top-0 z-30 bg-white/80 backdrop-blur border-b">
         <div className="container flex items-center justify-between h-16">
           <div className="flex items-center gap-2">
-            <div className="h-8 w-8 rounded-xl bg-black text-white grid place-items-center font-bold">AI</div>
+            <img
+              src="https://cdn.prod.website-files.com/682583f9a957c5ef54e23095/6825c66c6004fd92ca718d0f_BASIQ.avif"
+              alt="Basiq360 Logo"
+              className="h-8 w-auto"
+            />
             <span className="font-semibold">BTL Audit AI</span>
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm">
@@ -219,7 +224,8 @@ export default function Landing() {
               <Button size="lg" variant="secondary" className="rounded-2xl">Upload Sample Audit</Button>
             </div>
           </div>
-          <Card className="bg-white text-gray-900 rounded-2xl">
+          <BasiqForm />
+          {/* <Card className="bg-white text-gray-900 rounded-2xl">
             <CardHeader>
               <CardTitle>Get the deck & pricing</CardTitle>
             </CardHeader>
@@ -230,7 +236,7 @@ export default function Landing() {
               </div>
               <p className="mt-3 text-sm text-gray-600">Includes security overview, implementation plan, and ROI model.</p>
             </CardContent>
-          </Card>
+          </Card> */}
         </div>
       </section>
 
