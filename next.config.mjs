@@ -2,8 +2,8 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
-  basePath: '/BTL-Audit',
-  assetPrefix: '/BTL-Audit/',
+  basePath: '/btl-audit',
+  assetPrefix: '/btl-audit/',
   reactStrictMode: true
 };
 export default nextConfig;

@@ -46,7 +46,7 @@ export default function BasiqForm() {
                 type="text"
                 name="mauticform[f_name]"
                 id="mauticform_input_btlauditaibasiq360_f_name"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent mauticform-input bg-gray-50"
+                className="w-full px-4 py-3 border border-gray-300 text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent mauticform-input bg-gray-50"
                 placeholder="Full Name"
               />
               <span className="mauticform-errormsg text-red-500 text-sm mt-1 block" style={{ display: 'none' }}>This field is required</span>
@@ -63,8 +63,8 @@ export default function BasiqForm() {
                 type="tel"
                 name="mauticform[phone]"
                 id="mauticform_input_btlauditaibasiq360_phone"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent mauticform-input bg-gray-50"
-                placeholder="Phone"
+                className="w-full px-4 py-3 border border-gray-300 text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent mauticform-input bg-gray-50"
+                placeholder="Phone" minLength={10} maxLength={10}
               />
               <span className="mauticform-errormsg text-red-500 text-sm mt-1 block" style={{ display: 'none' }}>This field is required</span>
             </div>
@@ -80,7 +80,7 @@ export default function BasiqForm() {
                 type="email"
                 name="mauticform[email]"
                 id="mauticform_input_btlauditaibasiq360_email"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent mauticform-input bg-gray-50"
+                className="w-full px-4 py-3 border border-gray-300 text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent mauticform-input bg-gray-50"
                 placeholder="Work Email"
               />
               <span className="mauticform-errormsg text-red-500 text-sm mt-1 block" style={{ display: 'none' }}>This field is required</span>

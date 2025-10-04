@@ -7,7 +7,7 @@ export default function ThankYouPage() {
       <header className="fixed top-0 left-0 right-0 z-[1000] bg-white/95 backdrop-blur-[20px] border-b border-gray-200 py-4 transition-all duration-300">
         <nav className="container mx-auto px-4">
           <div className="flex items-center justify-between">
-            <a href="/BTL-Audit" className="transition-all duration-300 hover:scale-105">
+            <a href="/btl-audit" className="transition-all duration-300 hover:scale-105">
               <img
               src="https://cdn.prod.website-files.com/682583f9a957c5ef54e23095/6825c66c6004fd92ca718d0f_BASIQ.avif"
               alt="Basiq360 Logo"
@@ -57,7 +57,7 @@ export default function ThankYouPage() {
           
           <div className="animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
             <a 
-              href="/BTL-Audit" 
+              href="/btl-audit" 
               className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:bg-blue-700 hover:-translate-y-1 shadow-[0_4px_20px_rgba(0,102,204,0.2)] hover:shadow-[0_8px_30px_rgba(0,102,204,0.3)]"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -73,7 +73,7 @@ export default function ThankYouPage() {
       <footer className="bg-neutral-900 text-gray-300 py-12">
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center text-center gap-8">
-            <a href="/BTL-Audit" className="inline-block transition-transform duration-300 hover:scale-105">
+            <a href="/btl-audit" className="inline-block transition-transform duration-300 hover:scale-105">
               <img 
                 src="https://cdn.prod.website-files.com/682583f9a957c5ef54e23095/6825c66c6004fd92ca718d0f_BASIQ.avif"
               alt="Basiq360 Logo"
