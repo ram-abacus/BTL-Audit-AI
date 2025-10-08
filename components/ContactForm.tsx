@@ -48,6 +48,7 @@ export default function BasiqForm() {
                 id="mauticform_input_btlauditaibasiq360_f_name"
                 className="w-full px-4 py-3 border border-gray-300 text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent mauticform-input bg-gray-50"
                 placeholder="Full Name"
+                required
               />
               <span className="mauticform-errormsg text-red-500 text-sm mt-1 block" style={{ display: 'none' }}>This field is required</span>
             </div>
@@ -65,6 +66,7 @@ export default function BasiqForm() {
                 id="mauticform_input_btlauditaibasiq360_phone"
                 className="w-full px-4 py-3 border border-gray-300 text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent mauticform-input bg-gray-50"
                 placeholder="Phone" minLength={10} maxLength={10}
+                required
               />
               <span className="mauticform-errormsg text-red-500 text-sm mt-1 block" style={{ display: 'none' }}>This field is required</span>
             </div>
@@ -82,6 +84,7 @@ export default function BasiqForm() {
                 id="mauticform_input_btlauditaibasiq360_email"
                 className="w-full px-4 py-3 border border-gray-300 text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent mauticform-input bg-gray-50"
                 placeholder="Work Email"
+                required
               />
               <span className="mauticform-errormsg text-red-500 text-sm mt-1 block" style={{ display: 'none' }}>This field is required</span>
             </div>
@@ -97,6 +100,7 @@ export default function BasiqForm() {
                 id="mauticform_input_btlauditaibasiq360_company"
                 className="w-full px-4 py-3 border border-gray-300 text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent mauticform-input bg-gray-50"
                 placeholder="Company Name"
+                required
               />
               <span className="mauticform-errormsg text-red-500 text-sm mt-1 block" style={{ display: 'none' }}></span>
             </div>
@@ -131,7 +135,7 @@ export default function BasiqForm() {
           type="hidden"
           name="mauticform[return]"
           id="mauticform_btlauditaibasiq360_return"
-          value=""
+          value="https://campaign.basiq360.com/thankyou.html"
         />
         <input
           type="hidden"
