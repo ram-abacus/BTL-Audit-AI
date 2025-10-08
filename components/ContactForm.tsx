@@ -1,8 +1,11 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function BasiqForm() {
+
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
   useEffect(() => {
     // Load Mautic form JS for submission handling
     if (!document.getElementById("mautic-form-script")) {
@@ -12,7 +15,27 @@ export default function BasiqForm() {
       script.async = true;
       document.body.appendChild(script);
     }
+
+    const handleMauticError = () => {
+      setIsSubmitting(false)
+    }
+
+    document.addEventListener("mauticFormValidationFailed", handleMauticError)
+
+    return () => {
+      document.removeEventListener("mauticFormValidationFailed", handleMauticError)
+    }
+
   }, []);
+
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    if (isSubmitting) {
+      e.preventDefault()
+      return
+    }
+    setIsSubmitting(true)
+  }
 
   return (
     <div className="bg-white rounded-2xl p-8 shadow-lg">
@@ -31,6 +54,7 @@ export default function BasiqForm() {
         id="mauticform_btlauditaibasiq360"
         data-mautic-form="btlauditaibasiq360"
         encType="multipart/form-data"
+        onSubmit={handleSubmit}
       >
         <div className="mauticform-innerform">
           <div className="mauticform-page-wrapper mauticform-page-1" data-mautic-form-page="1">
@@ -116,8 +140,9 @@ export default function BasiqForm() {
                 value="1"
                 id="mauticform_input_btlauditaibasiq360_submit"
                 type="submit"
+                disabled={isSubmitting}
               >
-                Submit
+                {isSubmitting ? "Submitting..." : "Submit"}
               </button>
             </div>
 
