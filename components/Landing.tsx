@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import BasiqForm from "./ContactForm";
+import Header from "./Header";
+import Footer from "./Footer";
 
 export default function Landing() {
   const [email, setEmail] = useState("");
@@ -14,7 +16,8 @@ export default function Landing() {
   return (
     <div className="min-h-screen bg-white text-gray-900">
       {/* Nav */}
-      <header className="sticky top-0 z-30 bg-white/80 backdrop-blur border-b">
+      <Header/>
+      {/* <header className="sticky top-0 z-30 bg-white/80 backdrop-blur border-b">
         <div className="container flex items-center justify-between h-16">
           <div className="block sm:flex  items-center gap-2">
             <img
@@ -35,7 +38,7 @@ export default function Landing() {
             <Button className="rounded-2xl" onClick={() => document.getElementById("cta")?.scrollIntoView({ behavior: "smooth" })}>Book a Demo</Button>
           </div>
         </div>
-      </header>
+      </header> */}
 
       {/* Hero */}
       <section className="relative overflow-hidden">
@@ -254,7 +257,8 @@ export default function Landing() {
       </section>
 
       {/* Footer */}
-      <footer className="py-10 border-t">
+      <Footer/>
+      {/* <footer className="py-10 border-t">
         <div className="container grid md:grid-cols-3 gap-6 text-sm">
           <div>
             <div className="font-semibold">BTL Audit AI</div>
@@ -278,7 +282,7 @@ export default function Landing() {
           </div>
         </div>
         <div className="text-center text-xs text-gray-500 mt-6">© {new Date().getFullYear()} BTL Audit AI. All rights reserved.</div>
-      </footer>
+      </footer> */}
     </div>
   );
 }
