@@ -1,24 +1,45 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { X, Shield } from 'lucide-react';
 import Link from 'next/link';
 
 export default function CookieConsent() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const [preferences, setPreferences] = useState({
     analytics: false,
     marketing: false,
   });
 
+  // Check if user has already made a choice
+  useEffect(() => {
+    const saved = localStorage.getItem('cookiePreferences');
+    if (!saved) {
+      setIsOpen(true);
+    } else {
+      setPreferences(JSON.parse(saved));
+    }
+  }, []);
+
+  // Save preferences when they change
+  useEffect(() => {
+    if (preferences.analytics || preferences.marketing) {
+      localStorage.setItem('cookiePreferences', JSON.stringify(preferences));
+    }
+  }, [preferences]);
+
   if (!isOpen) return null;
 
   const handleAcceptAll = () => {
-    setPreferences({ analytics: true, marketing: true });
+    const newPrefs = { analytics: true, marketing: true };
+    setPreferences(newPrefs);
+    localStorage.setItem('cookiePreferences', JSON.stringify(newPrefs));
     setIsOpen(false);
   };
 
   const handleRejectAll = () => {
-    setPreferences({ analytics: false, marketing: false });
+    const newPrefs = { analytics: false, marketing: false };
+    setPreferences(newPrefs);
+    localStorage.setItem('cookiePreferences', JSON.stringify(newPrefs));
     setIsOpen(false);
   };
 
